@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<view class="page-body page__hd">
+  <view class="page-section">
+    <view class="weui-cells__title">手机号码</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" type="number" maxlength="11" focus="true" placeholder="请输入你的手机号码"/>
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">商品URL</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" name="goodsUrl" id="goodsUrl" width="350"  maxlength="350" bindinput='setGoodsUrl' placeholder="请输入要秒杀的商品URL"/>
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">提前几秒开始</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" type='number' placeholder="输入要提前开始的秒数"/>
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">结束秒数</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" type='number' placeholder="正式开始后几秒停止秒杀"/>
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">秒几件商品,0件表示不限制</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" type='number' value='0' auto-focus/>
+      </view>
+    </view>
+  </view>
+  <view class="page__bd page__bd_spacing" style='margin-top:20px;'>
+    <button class="weui-btn" type="primary" bindtap="getGoodsBarCode">提交</button>
+  </view>
+</view>
